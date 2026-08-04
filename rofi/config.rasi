@@ -1,0 +1,7 @@
+
+@theme "~/.config/rofi/material.rasi"
+
+window {
+    terminal: "kitty";
+    font: "JetBrains Mono 11";
+}

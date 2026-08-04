@@ -1,0 +1,21 @@
+@theme "/home/crimson/.config/rofi/material.rasi"
+
+
+window {
+    terminal: "kitty";
+    font: "JetBrains Mono 15";
+    width: 400px;
+    height: 350;
+    anchor: center;
+
+}
+
+listview {
+    rows:  4;
+    columns: 1;
+    cycle: false;
+    dynamic: true;
+    scrollbar: false;
+    fixed-height: false;
+    fixed-columns: false;
+}
