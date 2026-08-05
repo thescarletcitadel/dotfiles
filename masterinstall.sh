@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update package database and upgrade existing packages
-sudo pacman -Syu --noconfirm
+sudo pacman -Syyu --noconfirm
 
 # Install kernel headers (required for nvidia-open-dkms)
 sudo pacman -S linux-headers --noconfirm
@@ -29,9 +29,6 @@ wget -O wootility.AppImage https://api.wooting.io/public/wootility/download?os=l
 wget -O zen.AppImage https://github.com/zen-browser/desktop/releases/download/1.21.1b/zen-x86_64.AppImage
 
 wget -O lug-helper.AppImage https://github.com/starcitizen-lug/lug-helper/releases/download/v4.14/LUG-Helper-v4.14.AppImage
-
-
-
 
 # Make AppImages executable
 chmod +x *.AppImage

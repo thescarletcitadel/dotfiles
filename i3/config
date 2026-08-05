@@ -304,3 +304,4 @@ exec $HOME/pkg/fluxer.AppImage
 exec $HOME/pkg/vencord.AppImage
 exec_always xrandr --output DP-0 --auto --right-of DP-4
 exec_always ~/pkg/autotiling-1.9.4/autotiling/main.py
+exec_always xset r rate 100 50
