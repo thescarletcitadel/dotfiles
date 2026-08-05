@@ -7,21 +7,21 @@ return {
 		opts = {
 			transparent = false,
 			colors = {
-				bg = "#1B1B1B",
-				bg_dark = "#1B1B1B",
+				--				bg = "#1B1B1B",
+				--				bg_dark = "#1B1B1B",
 				bg_highlight = "#323232",
 				fg = "#efebdc",
 				fg_dark = "#C0AF7F",
 				comment = "#817f68",
 
 				red = "#F44336",
-				orange = "#e67e22",
+				orange = "#FF0000",
 				yellow = "#a99b7a",
 				green = "#e75a50",
 				cyan = "#6d6d6d",
 				blue = "#e58980",
 				purple = "#9683a1",
-				magenta = "#77838a",
+				magenta = "#77838a"
 			},
 			on_highlights = function(hl, c)
 				hl.CursorLine = { bg = c.bg_highlight }
@@ -50,12 +50,12 @@ return {
 				hl["@lsp.type.parameter"] = { fg = c.fg, italic = true }
 				hl["@lsp.type.variable"] = { fg = c.fg }
 				hl["@lsp.type.boolean"] = { fg = c.orange, bold = true }
-			end,
+			end
 		},
 		config = function(_, opts)
 			require("aether").setup(opts)
 			require("aether.hotreload").setup()
 			vim.cmd.colorscheme("aether")
-		end,
-	},
+		end
+	}
 }

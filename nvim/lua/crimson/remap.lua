@@ -10,7 +10,8 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>")
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>")
 vim.keymap.set("n", "<leader>f", function()
 	vim.lsp.buf.format({ async = true })
-end, { desc = "Format buffer" })
+end, { desc = "Format buffer" }
+)
 
 vim.keymap.set("n", "<leader>k", ":e ~/")
 vim.keymap.set("n", "<leader>q", vim.cmd.q)
