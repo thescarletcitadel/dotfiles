@@ -7,86 +7,17 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S linux-headers --noconfirm
 
 # Install packages individually so failures don't stop the rest
-echo "Installing Firefox..."
-sudo pacman -S --noconfirm firefox
 
-echo "installing gimp"
-sudo pacman -S --noconfirm gimp
+PACKAGE = ("firefox" "gimp" "playerctl" "sudo" "pamcan" -"S" --"noconfirm" "feh" "freecad" "neovim" "rofi" "redshift" "picom" "qbittorrent" "polybar" "pipewire" "pavucontrol" "nvidia"-"open"-"dkms" "nvidia"-"settings" "nvidia"-"prime" "kitty" "libnotify" "copyq" "prismlauncher" "rofi"-"nerdy" "steam" "ttf"-"jetbrains"-"mono"-"nerd" "ttf"-"jetbrains"-"mono" "vlc" "xviewer" "obs"-"studio" "imagemagick") 
 
-echo "installing playerctl"
-sudo pacman -S --noconfirm playerctl
+for pkg in "${PACKAGE[@]}"; do 
 
-echo "installing feh..."
-sudo pamcan -S --noconfirm feh
+	sudo pacman -S --noconfirm ${pkg}
 
-echo installing freecad 
-sudo pacman -S --noconfirm freecad
-
-echo "Installing Neovim..."
-sudo pacman -S --noconfirm neovim
-
-echo "Installing Rofi..."
-sudo pacman -S --noconfirm rofi
-
-echo "Installing Redshift..."
-sudo pacman -S --noconfirm redshift
-
-echo "Installing Picom..."
-sudo pacman -S --noconfirm picom
-
-echo "Installing qBittorrent..."
-sudo pacman -S --noconfirm qbittorrent
-
-echo "Installing Polybar..."
-sudo pacman -S --noconfirm polybar
-
-echo "Installing Pipewire..."
-sudo pacman -S --noconfirm pipewire
-
-echo "Installing Pavucontrol..."
-sudo pacman -S --noconfirm pavucontrol
-
-echo "Installing NVIDIA Drivers..."
-sudo pacman -S --noconfirm nvidia-open-dkms nvidia-settings nvidia-prime
-
-echo "Installing Kitty..."
-sudo pacman -S --noconfirm kitty
-
-echo "Installing Libnotify..."
-sudo pacman -S --noconfirm libnotify
-
-
-echo "Installing CopyQ..."
-sudo pacman -S --noconfirm copyq
-
-echo "Installing Prism Launcher..."
-sudo pacman -S --noconfirm prismlauncher
-
-echo "Installing Rofi-Nerdy..."
-sudo pacman -S --noconfirm rofi-nerdy
-
-echo "Installing Steam..."
-sudo pacman -S --noconfirm steam
-
-echo "Installing Fonts..."
-sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-jetbrains-mono
-
-echo "Installing VLC..."
-sudo pacman -S --noconfirm vlc
-
-echo "Installing Xviewer..."
-sudo pacman -S --noconfirm xviewer
-
-echo "installing obs-studio"
-sudo pacman -S --noconfirm obs-studio
-
-echo "installing imagemagick"
-sudo pacman -S --noconfirm imagemagick
+done
 
 sleep 1s
 
-# Download AppImages
-echo "Downloading AppImages..."
 wget -O ente-auth.AppImage https://github.com/ente-io/ente/releases/download/auth-v4.4.22/ente-auth-v4.4.22-x86_64.AppImage
 
 wget -O localsend.AppImage https://github.com/localsend/localsend/releases/download/v1.17.0/LocalSend-1.17.0-linux-x86-64.AppImage
@@ -99,8 +30,15 @@ wget -O zen.AppImage https://github.com/zen-browser/desktop/releases/download/1.
 
 wget -O lug-helper.AppImage https://github.com/starcitizen-lug/lug-helper/releases/download/v4.14/LUG-Helper-v4.14.AppImage
 
+
+
+
 # Make AppImages executable
 chmod +x *.AppImage
+
+mkdir ~/pkg
+
+mv *.AppImage ~/pkg 
 
 # Make scripts executable 
 chmod +x *.sh
