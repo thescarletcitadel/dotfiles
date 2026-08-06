@@ -8,7 +8,7 @@ sudo pacman -S linux-headers --noconfirm
 
 # Install packages individually so failures don't stop the rest
 
-PACKAGE = ("firefox" "gimp" "playerctl" "sudo" "pamcan" -"S" --"noconfirm" "feh" "freecad" "neovim" "rofi" "redshift" "picom" "qbittorrent" "polybar" "pipewire" "pavucontrol" "nvidia"-"open"-"dkms" "nvidia"-"settings" "nvidia"-"prime" "kitty" "libnotify" "copyq" "prismlauncher" "rofi"-"nerdy" "steam" "ttf"-"jetbrains"-"mono"-"nerd" "ttf"-"jetbrains"-"mono" "vlc" "xviewer" "obs"-"studio" "imagemagick") 
+PACKAGE = ("firefox" "gimp" "playerctl" "feh" "freecad" "neovim" "rofi" "redshift" "picom" "qbittorrent" "polybar" "pipewire" "pavucontrol" "nvidia-open-dkms" "nvidia-settings" "nvidia-prime" "kitty" "libnotify" "copyq" "prismlauncher" "rofi-nerdy" "steam" "ttf-jetbrains-mono-nerd" "ttf-jetbrains-mono" "vlc" "xviewer" "obs-studio" "imagemagick") 
 
 for pkg in "${PACKAGE[@]}"; do 
 
@@ -23,8 +23,6 @@ wget -O ente-auth.AppImage https://github.com/ente-io/ente/releases/download/aut
 wget -O localsend.AppImage https://github.com/localsend/localsend/releases/download/v1.17.0/LocalSend-1.17.0-linux-x86-64.AppImage
 
 wget -O via.AppImage https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.AppImage 
-
-wget -O wootility.AppImage https://api.wooting.io/public/wootility/download?os=linux&version=5.3.1
 
 wget -O zen.AppImage https://github.com/zen-browser/desktop/releases/download/1.21.1b/zen-x86_64.AppImage
 
