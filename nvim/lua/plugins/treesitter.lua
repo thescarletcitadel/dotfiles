@@ -2,7 +2,7 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
-			"nvim-treesitter/nvim-treesitter-textobjects",
+			"nvim-treesitter/nvim-treesitter-textobjects"
 		},
 		branch = "master",
 		config = function()
@@ -17,7 +17,7 @@ return {
 					"rust",
 					"jsdoc",
 					"bash",
-					"go",
+					"go"
 				},
 
 				-- Install parsers synchronously (only applied to `ensure_installed`)
@@ -28,7 +28,7 @@ return {
 				auto_install = true,
 
 				indent = {
-					enable = true,
+					enable = true
 				},
 
 				highlight = {
@@ -41,12 +41,13 @@ return {
 						end
 
 						local max_filesize = 100 * 1024 -- 100 KB
-						local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+						local ok, stats = pcall(
+							vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf)
+						)
 						if ok and stats and stats.size > max_filesize then
 							vim.notify(
 								"File larger than 100KB treesitter disabled for performance",
-								vim.log.levels.WARN,
-								{ title = "Treesitter" }
+								vim.log.levels.WARN, { title = "Treesitter" }
 							)
 							return true
 						end
@@ -56,8 +57,8 @@ return {
 					-- Set this to `true` if you depend on "syntax" being enabled (like for indentation).
 					-- Using this option may slow down your editor, and you may see some duplicate highlights.
 					-- Instead of true it can also be a list of languages
-					additional_vim_regex_highlighting = { "markdown" },
-				},
+					additional_vim_regex_highlighting = { "markdown" }
+				}
 			})
 
 			local treesitter_parser_config = require("nvim-treesitter.parsers").get_parser_configs()
@@ -65,12 +66,12 @@ return {
 				install_info = {
 					url = "https://github.com/vrischmann/tree-sitter-templ.git",
 					files = { "src/parser.c", "src/scanner.c" },
-					branch = "master",
-				},
+					branch = "master"
+				}
 			}
 
 			vim.treesitter.language.register("templ", "templ")
-		end,
+		end
 	},
 
 	{
@@ -90,8 +91,8 @@ return {
 				-- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
 				separator = nil,
 				zindex = 20, -- The Z-index of the context window
-				on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+				on_attach = nil -- (fun(buf: integer): boolean) return false to disable attaching
 			})
-		end,
-	},
+		end
+	}
 }

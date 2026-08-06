@@ -10,13 +10,13 @@ client.urgent $border $border $border $border
 #pops open the world clock gui
 bindcode 191 exec $HOME/.config/polybar/worldclock.sh
 #turn down media
-bindcode 192 exec ~/dotfiles/mediadown.sh
+bindcode 192 exec $HOME/dotfiles/mediadown.sh
 #turn up media
-bindcode 193 exec ~/dotfiles/mediaup.sh
+bindcode 193 exec $HOME/dotfiles/mediaup.sh
 #turn up fluxer
-bindsym F24 exec ~/dotfiles/fluxerup.sh
+bindsym F24 exec $HOME/dotfiles/fluxerup.sh
 #turn down fluxer
-bindsym F23 exec ~/dotfiles/fluxerdown.sh
+bindsym F23 exec $HOME/dotfiles/fluxerdown.sh
 
 #set i3 font
 font pango:JetBrainsMono Nerd Font Mono 11
@@ -60,15 +60,15 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
 # switches audio to preset sources
-bindsym $mod+F1 exec ~/dotfiles/.audioswap.sh
+bindsym $mod+F1 exec $HOME/dotfiles/.audioswap.sh
 # focus pip videos
 bindsym $mod+shift+p exec wmctrl -a "picture-in-picture"
 # takes a screenshot of selected region 
-bindsym $mod+shift+s exec ~/pkg/screenshot selection
+bindsym $mod+shift+s exec $HOME/pkg/screenshot selection
 # open color picker 
-bindsym $mod+control+s exec ~/pkg/screenshot color
+bindsym $mod+control+s exec $HOME/pkg/screenshot color
 # takes a screenshot of the current window and opens it 
-bindsym $mod+s exec ~/pkg/screenshot window 
+bindsym $mod+s exec $HOME/pkg/screenshot window 
 # open bc in topbar
 bindsym $mod+shift+plus exec notify-send $(dmenu -p "calc" <&- | bc -l 2>/dev/null)
 
@@ -95,9 +95,9 @@ bindsym $mod+shift+x exec xkill
 #opens xprop
 bindsym $mod+x exec kitty --hold xprop
 #opens notes launcher
-bindsym $mod+n exec ~/.config/i3/notes.sh
+bindsym $mod+n exec $HOME/.config/i3/notes.sh
 #opens private notes
-bindsym $mod+shift+n exec ~/.config/i3/jan.sh
+bindsym $mod+shift+n exec $HOME/.config/i3/jan.sh
 #opens veracrypt
 bindsym $mod+v exec veracrypt
 #focus veracrypt
@@ -115,21 +115,21 @@ bindsym $mod+shift+b exec wmctrl -a "zen"
 # focuses main terminal window
 bindsym $mod+shift+Return exec wmctrl -a "ck1"
 # opens the shortcut list
-bindsym $mod+shift+o exec ~/dotfiles/i3/i3key.sh
+bindsym $mod+shift+o exec $HOME/dotfiles/i3/i3key.sh
 # opens a window switcher
 bindsym Mod1+Tab exec rofi -show window
 # opens localsend 
-bindsym $mod+t exec ~/pkg/localsend.AppImage
+bindsym $mod+t exec $HOME/pkg/localsend.AppImage
 #focus local send
 bindsym $mod+shift+t exec wmctrl -a "localsend"
 # opens wallpaper changer
-bindsym $mod+w exec ~/.config/i3/wallpaper.sh
+bindsym $mod+w exec $HOME/.config/i3/wallpaper.sh
 #opens my Ai
-bindsym $mod+a exec ~/dotfiles/secondai.sh
+bindsym $mod+a exec $HOME/dotfiles/secondai.sh
 #opens secondai
-bindsym $mod+ctrl+a exec ~/dotfiles/lumo.sh
+bindsym $mod+ctrl+a exec $HOME/dotfiles/lumo.sh
 #opens authenticator
-bindsym $mod+e exec ~/pkg/ente-auth.AppImage
+bindsym $mod+e exec $HOME/pkg/ente-auth.AppImage
 #focus authenticator
 bindsym $mod+shift+e exec wmctrl -a "Ente Auth"
 #focus ai 
@@ -160,9 +160,9 @@ bindsym $mod+Mod1+c exec xdotool click --clearmodifiers 1
 bindsym $mod+Mod1+ctrl+c exec xdotool click --clearmodifiers 3
 
 # opens command list
-bindsym $mod+Mod1+o exec cat ~/.config/i3/cmdlist.txt | rofi -dmenu -i -p "command dictionary"
+bindsym $mod+Mod1+o exec cat $HOME/.config/i3/cmdlist.txt | rofi -dmenu -i -p "command dictionary"
 # opens power menu
-bindsym $mod+p exec ~/.config/i3/power.sh
+bindsym $mod+p exec $HOME/.config/i3/power.sh
 
 # kill focused window
 bindsym $mod+Shift+w kill
@@ -205,6 +205,12 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "bg apps"
+
+# Automatically float and make Picture-in-Picture windows sticky
+for_window [title="Picture-in-Picture"] floating enable, sticky enable
+for_window [title="Picture-in-picture"] floating enable, sticky enable
+for_window [window_role="PictureInPicture"] floating enable, sticky enable
+
 
 # workspace default monitor
 workspace $ws1 output DP-4
@@ -270,16 +276,16 @@ mode "resize" {
 
    # resizing off of center 
 # Resize width evenly (Grow)
-bindsym $mod+Shift+l exec ~/.config/i3/centerresize.sh grow width 100
+bindsym $mod+Shift+l exec $HOME/.config/i3/centerresize.sh grow width 100
 
 # Resize width evenly (Shrink)
-bindsym $mod+Shift+h exec ~/.config/i3/centerresize.sh shrink width 100
+bindsym $mod+Shift+h exec $HOME/.config/i3/centerresize.sh shrink width 100
 
 # Resize height evenly (Grow)
-bindsym $mod+Shift+k exec ~/.config/i3/centerresize.sh grow height 100
+bindsym $mod+Shift+k exec $HOME/.config/i3/centerresize.sh grow height 100
 
 # Resize height evenly (Shrink)
-bindsym $mod+Shift+j exec ~/.config/i3/centerresize.sh shrink height 100
+bindsym $mod+Shift+j exec $HOME/.config/i3/centerresize.sh shrink height 100
 
 
                # back to normal: Enter or Escape or $mod+r
@@ -293,15 +299,14 @@ bindsym $mod+Shift+j exec ~/.config/i3/centerresize.sh shrink height 100
 bindsym $mod+r mode "resize"
 
 # startup commands
-exec_always picom --config ~/.config/picom/1picom.conf
-exec_always ~/.config/polybar/launch.sh
+exec_always picom --config $HOME/.config/picom/1picom.conf
+exec_always $HOME/.config/polybar/launch.sh
 exec_always xrandr --output DP-4 --left-of DP-0
 exec_always mullvad connect
-exec feh --bg-scale ~/.config/i3/backgrounds/felix.png
+exec feh --bg-scale $HOME/.config/i3/backgrounds/felix.png
 exec --no-startup-id xset s off -dpms
-exec xmodmap ~/.config/i3/xmodmap
+exec xmodmap $HOME/.config/i3/xmodmap
 exec $HOME/pkg/fluxer.AppImage
 exec $HOME/pkg/vencord.AppImage
 exec_always xrandr --output DP-0 --auto --right-of DP-4
-exec_always ~/pkg/autotiling-1.9.4/autotiling/main.py
-exec_always xset r rate 100 50
+exec_always $HOME/pkg/autotiling-1.9.4/autotiling/main.py

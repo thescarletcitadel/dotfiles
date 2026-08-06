@@ -5,7 +5,7 @@ require("crimson.options")
 require("plugins.render-markdown")
 require("lazy").setup("crimson.lazy")
 require("plugins.telescope")
--- print("init.lua loaded successfully"
+print "init.lua loaded successfully"
 
 -- sets the clip board to work with xclip
 vim.opt.clipboard = "unnamedplus"

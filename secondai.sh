@@ -3,13 +3,17 @@ URL="${1:-https://gemini.google.com}"
 NEW_NAME="gemini"
 
 
+# Path to the Zen executable (adjust if you have a permanent installation path)
+ZEN_BIN="$HOME/pkg/zen.AppImage"
+
 i3-msg "workspace ai"
 
-i3-msg "exec firefox --new-window "$URL" &"
+# Launch Zen browser with the URL
+i3-msg "exec $ZEN_BIN --new-window '$URL' &"
 sleep 3
 
-# Get window ID of newly opened Firefox window
-WIN_ID=$(wmctrl -l | grep -i firefox | tail -1 | awk '{print $1}')
+# Get window ID of the newly opened Zen window (matching 'zen' or the window title)
+WIN_ID=$(wmctrl -l | grep -iE "zen|gemini" | tail -1 | awk '{print $1}')
 
 if [ -n "$WIN_ID" ]; then
     wmctrl -i -r "$WIN_ID" -N "$NEW_NAME"
