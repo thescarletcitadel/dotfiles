@@ -64,11 +64,11 @@ bindsym $mod+F1 exec $HOME/dotfiles/.audioswap.sh
 # focus pip videos
 bindsym $mod+shift+p exec wmctrl -a "picture-in-picture"
 # takes a screenshot of selected region 
-bindsym $mod+shift+s exec $HOME/pkg/screenshot selection
+bindsym $mod+shift+s exec $HOME/dotfiles/screenshot selection
 # open color picker 
-bindsym $mod+control+s exec $HOME/pkg/screenshot color
+bindsym $mod+control+s exec $HOME/dotfiles/screenshot color
 # takes a screenshot of the current window and opens it 
-bindsym $mod+s exec $HOME/pkg/screenshot window 
+bindsym $mod+s exec $HOME/dotfiles/screenshot window 
 # open bc in topbar
 bindsym $mod+shift+plus exec notify-send $(dmenu -p "calc" <&- | bc -l 2>/dev/null)
 
