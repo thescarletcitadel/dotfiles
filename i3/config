@@ -310,3 +310,6 @@ exec $HOME/pkg/fluxer.AppImage
 exec $HOME/pkg/vencord.AppImage
 exec_always xrandr --output DP-0 --auto --right-of DP-4
 exec_always $HOME/pkg/autotiling-1.9.4/autotiling/main.py
+exec $HOME/pkg/zen.AppImage
+exec kitty --tile ck1
+exec i3-resurrect restore -w firefox
