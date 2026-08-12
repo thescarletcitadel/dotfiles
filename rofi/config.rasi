@@ -5,3 +5,5 @@ window {
     terminal: "kitty";
     font: "JetBrains Mono 11";
 }
+
+

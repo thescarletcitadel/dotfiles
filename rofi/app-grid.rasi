@@ -1,0 +1,122 @@
+
+configuration {
+    /* Enable application launcher mode */
+    modi: "drun";
+    
+    /* Show application icons */
+    show-icons: true;
+    icon-theme: "Papirus"; /* Replace with your icon theme if different */
+    
+    /* Display settings */
+    display-drun: "Apps";
+    drun-display-format: "{name}";
+    
+    /* Disable top prompt/input line if you want a cleaner look, or leave it enabled */
+    disable-history: false;
+    sidebar-mode: false;
+}
+
+
+* {
+    background-color: #1e1e2e;
+    text-color: #cdd6f4;
+    font: "JetBrains Mono Nerd Font 10";
+}
+
+* {
+	base00: #263238;
+	base01: #2E3C43;
+	base02: #314549;
+	base03: #546E7A;
+	base04: #B2CCD6;
+	base05: #EEFFFF;
+	base06: #EEFFFF;
+	base07: #FFFFFF;
+	base08: #F07178;
+	base09: #F78C6C;
+	base0A: #FFCB6B;
+	base0B: #C3E88D;
+	base0C: #89DDFF;
+	base0D: #FF0000; /*change this one idiot*/
+	basetext: #ffffff;
+	base0E: #C792EA;
+	base0F: #FF5370;
+
+	base0D: #00BCD4;
+
+	spacing: 0;
+	background-color: transparent;
+
+}
+
+
+
+
+
+
+
+
+
+
+window {
+    width: 600px;
+    height: 500px;
+    border: 2px solid;
+    border-color: #89b4fa;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    spacing: 15px;
+}
+
+inputbar {
+    children: [entry];
+    background-color: #313244;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+entry {
+    placeholder: "Search applications...";
+    text-color: @text-color;
+}
+
+listview {
+    /* Create a grid layout: columns x rows */
+    columns: 4;
+    lines: 3;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    spacing: 20px;
+    scrollbar: false;
+}
+
+element {
+    orientation: vertical; /* Stack icon above text */
+    padding: 15px 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+element selected {
+    background-color: #45475a;
+    text-color: #89b4fa;
+}
+
+element-icon {
+    size: 48px; /* Adjust icon size */
+    horizontal-align: 0.5;
+    cursor: inherit;
+}
+
+element-text {
+    horizontal-align: 0.5; /* Center the text underneath the icon */
+    vertical-align: 0.5;
+    margin: 8px 0px 0px 0px; /* Space between icon and text */
+    cursor: inherit;
+}

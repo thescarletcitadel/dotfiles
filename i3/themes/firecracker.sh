@@ -8,7 +8,8 @@ OLD_COLORS=("ff0000" "3cdeff" "0800ff" "e76f51" "ba1e21" "c33e2d" "8600e5")
 name="firecracker"
 
 # 2. Define the NEW color
-NEW_COLOR="e2ac2e"
+#NEW_COLOR="e2ac2e"
+NEW_COLOR="FF0000"
 
 # 3. Loop through the list and replace each one
 for old in "${OLD_COLORS[@]}"; do
@@ -27,7 +28,7 @@ done
 
 # 4. Rest of your script remains the same
 rm -rf ~/.config/nvim/lua/plugins/colors.lua
-cp -r ~/.config/i3/themes.nvim/$name.lua ~/.config/nvim/lua/plugins/colors.lua
+cp -r ~/.config/i3/themes.nvim/felix.lua ~/.config/nvim/lua/plugins/colors.lua
 
 feh --bg-scale ~/.config/i3/backgrounds/$name.png
 i3-msg restart

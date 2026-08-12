@@ -1,12 +1,11 @@
 #!/bin/bash
 
-#option=$(printf "cipher\ncrimsonwaves\nrosepine\nfelix\nmidnightstorm\nfirecracker\nraven\nqueenofthorns" | rofi \
+#option=$(printf "cipher\nrosepine\nfelix\nmidnightstorm\nfirecracker\nraven\nqueenofthorns" | rofi \
 #    -dmenu \
 #    -config ~/.config/rofi/themes.rasi \
 #    -p "Wallpaper")
 #
 #case "$option" in 
-#    "crimsonwaves") /home/crimson/.config/i3/themes/crimonwaves.sh ;;
 #    "cipher") /home/crimson/.config/i3/themes/cipher.sh ;;
 #    "rosepine") /home/crimson/.config/i3/themes/rosepine.sh;;
 #    "felix") /home/crimson/.config/i3/themes/felix.sh;;

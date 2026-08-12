@@ -22,7 +22,7 @@
 	base0A: #FFCB6B;
 	base0B: #C3E88D;
 	base0C: #89DDFF;
-	base0D: #ff0000; /*change this one idiot*/
+	base0D: #FF0000; /*change this one idiot*/
 	basetext: #ffffff;
 	base0E: #C792EA;
 	base0F: #FF5370;

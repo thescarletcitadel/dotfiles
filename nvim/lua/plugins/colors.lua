@@ -7,15 +7,15 @@ return {
 		opts = {
 			transparent = false,
 			colors = {
-				--				bg = "#1B1B1B",
-				--				bg_dark = "#1B1B1B",
+				--bg = "#1B1B1B",
+				bg_dark = "#1B1B1B",
 				bg_highlight = "#323232",
 				fg = "#efebdc",
 				fg_dark = "#C0AF7F",
 				comment = "#817f68",
 
 				red = "#F44336",
-				orange = "#FF0000",
+				orange = "#e67e22",
 				yellow = "#a99b7a",
 				green = "#e75a50",
 				cyan = "#6d6d6d",
