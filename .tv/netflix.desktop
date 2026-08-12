@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Icon=~/netflix.png
+Exec=/home/crimson/netflix.sh
+Name=Netflix
+
