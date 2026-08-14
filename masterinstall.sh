@@ -20,7 +20,7 @@ sleep 1s
 
 wget -O ente-auth.AppImage https://github.com/ente-io/ente/releases/download/auth-v4.4.22/ente-auth-v4.4.22-x86_64.AppImage
 
-wget -O localsend.AppImage https://github.com/localsend/localsend/releases/download/v1.17.0/LocalSend-1.17.0-linux-x86-64.AppImage
+wget -O localsend.AppImage https://github.com/localsend/localsend/releases/download/v1.18.0/LocalSend-1.18.0-linux-x86-64.AppImage
 
 wget -O via.AppImage https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.AppImage 
 
@@ -31,9 +31,9 @@ wget -O lug-helper.AppImage https://github.com/starcitizen-lug/lug-helper/releas
 # Make AppImages executable
 chmod +x *.AppImage
 
-mkdir ~/pkg
+mkdir $HOME/pkg
 
-mv *.AppImage ~/pkg 
+mv *.AppImage $HOME/pkg 
 
 # Make scripts executable 
 chmod +x *.sh

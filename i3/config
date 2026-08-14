@@ -66,7 +66,7 @@ bindsym XF86AudioStop exec --no-startup-id playerctl stop
 # switches audio to preset sources
 bindsym $mod+F1 exec $HOME/dotfiles/.audioswap.sh
 # focus pip videos
-bindsym $mod+shift+p exec wmctrl -a "picture-in-picture"
+bindsym $mod+shift+p exec wmctrl -a "picture-in-picture"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 # takes a screenshot of selected region 
 bindsym $mod+shift+s exec $HOME/dotfiles/screenshot selection
 # open color picker 
@@ -87,11 +87,11 @@ bindsym $mod+shift+u exec i3-resurrect restore -w firefox
 #open fluxer
 bindsym $mod+ctrl+g exec $HOME/pkg/fluxer.AppImage
 #focus fluxer
-bindsym $mod+ctrl+shift+g exec wmctrl -a "fluxer"
+bindsym $mod+ctrl+shift+g exec wmctrl -a "fluxer"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 #open vencord
 bindsym $mod+g exec $HOME/pkg/vencord.AppImage
 #focus vencord
-bindsym $mod+shift+g exec wmctrl -a "discord"
+bindsym $mod+shift+g exec wmctrl -a "discord"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 #starts recording in obs
 bindsym $mod+o exec obs --startrecording
 #opens xkill to kill programs
@@ -105,7 +105,7 @@ bindsym $mod+shift+n exec $HOME/.config/i3/jan.sh
 #opens veracrypt
 bindsym $mod+v exec veracrypt
 #focus veracrypt
-bindsym $mod+shift+v exec wmctrl -a "veracrypt"
+bindsym $mod+shift+v exec wmctrl -a "veracrypt"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 #open the icon picker
 bindsym $mod+comma exec rofi nerdy -show nerdy
 #opens btop in terminal workspace
@@ -115,9 +115,9 @@ bindsym $mod+Return exec kitty --title ck1
 # opens main browser
 bindsym $mod+b exec $HOME/pkg/zen.AppImage
 # focus the main browser
-bindsym $mod+shift+b exec wmctrl -a "zen"
+bindsym $mod+shift+b exec wmctrl -a "zen"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 # focuses main terminal window
-bindsym $mod+shift+Return exec wmctrl -a "ck1"
+bindsym $mod+shift+Return exec wmctrl -a "ck1"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 # opens the shortcut list
 bindsym $mod+shift+o exec $HOME/dotfiles/i3/i3key.sh
 # opens a window switcher
@@ -125,7 +125,7 @@ bindsym Mod1+Tab exec rofi -show window
 # opens localsend 
 bindsym $mod+t exec $HOME/pkg/localsend.AppImage
 #focus local send
-bindsym $mod+shift+t exec wmctrl -a "localsend"
+bindsym $mod+shift+t exec wmctrl -a "localsend"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 # opens wallpaper changer
 bindsym $mod+w exec $HOME/.config/i3/wallpaper.sh
 #opens my Ai
@@ -135,11 +135,11 @@ bindsym $mod+ctrl+a exec $HOME/dotfiles/lumo.sh
 #opens authenticator
 bindsym $mod+e exec $HOME/pkg/ente-auth.AppImage
 #focus authenticator
-bindsym $mod+shift+e exec wmctrl -a "Ente Auth"
+bindsym $mod+shift+e exec wmctrl -a "Ente Auth"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 #focus ai 
-bindsym $mod+shift+a exec wmctrl -a "gemini"
+bindsym $mod+shift+a exec wmctrl -a "gemini"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 #focus second ai
-bindsym $mod+shift+ctrl+a exec wmctrl -a "lumo"
+bindsym $mod+shift+ctrl+a exec wmctrl -a "lumo"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 
 # moving mouse with the keyboard super and alt 
 # moves mouse to the left
@@ -175,10 +175,10 @@ bindsym $mod+Shift+w kill
 bindsym $mod+d exec rofi -show drun
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+h focus left; exec --no-startup-id $HOME/.config/i3/centermouse.sh
+bindsym $mod+j focus down; exec --no-startup-id $HOME/.config/i3/centermouse.sh
+bindsym $mod+k focus up; exec --no-startup-id $HOME/.config/i3/centermouse.sh
+bindsym $mod+l focus right; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 
 # move focused window left
 bindsym $mod+Shift+h move left 40 px
@@ -239,6 +239,7 @@ assign [class="wootility"] $ws2
 assign [class="vesktop"] $ws5
 assign [class="Fluxer"] $ws5
 assign [class="discord"] $ws5
+assign [class="Minecraft* 26.2"] $ws3
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -319,7 +320,6 @@ exec $HOME/pkg/fluxer.AppImage
 exec $HOME/pkg/vencord.AppImage
 exec_always xrandr --output DP-0 --auto --right-of DP-4
 exec_always $HOME/pkg/autotiling-1.9.4/autotiling/main.py
-exec $HOME/pkg/zen.AppImage
 exec kitty --tile ck1
 exec i3-resurrect restore -w firefox
 exec_always xmodmap $HOME/.config/i3/xmodmap
