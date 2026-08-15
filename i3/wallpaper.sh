@@ -19,7 +19,7 @@
 
 
 
-option=$(printf "firecracker\nfelix\nastolfo" | rofi \
+option=$(printf "firecracker\nfelix\nastolfo\ncrimsonwaves\nteto" | rofi \
     -dmenu \
     -config ~/.config/rofi/themes.rasi \
     -p "Wallpaper")
@@ -30,6 +30,8 @@ case "$option" in
 	"firecracker") feh --bg-scale /home/crimson/.config/i3/backgrounds/firecracker.png ;;
 	"felix") feh --bg-scale /home/crimson/.config/i3/backgrounds/felix.png ;;
 	"astolfo") feh --bg-scale /home/crimson/.config/i3/backgrounds/astolfo.png ;;
+	"crimsonwaves") feh --bg-scale /home/crimson/.config/i3/backgrounds/crimsonwaves.png ;;
+	"teto") feh --bg-scale /home/crimson/.config/i3/backgrounds/teto.png ;;
 
 
 esac

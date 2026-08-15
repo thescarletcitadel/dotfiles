@@ -8,7 +8,7 @@ sudo pacman -S linux-headers --noconfirm
 
 # Install packages individually so failures don't stop the rest
 
-PACKAGE = ("firefox" "gimp" "playerctl" "feh" "freecad" "neovim" "rofi" "redshift" "picom" "qbittorrent" "polybar" "pipewire" "pavucontrol" "nvidia-open-dkms" "nvidia-settings" "nvidia-prime" "kitty" "libnotify" "copyq" "prismlauncher" "rofi-nerdy" "steam" "ttf-jetbrains-mono-nerd" "ttf-jetbrains-mono" "vlc" "xviewer" "obs-studio" "imagemagick") 
+PACKAGE = ("firefox" "github-cli" "autotiling" "gimp" "playerctl" "feh" "freecad" "neovim" "rofi" "redshift" "picom" "qbittorrent" "polybar" "pipewire" "pavucontrol" "nvidia-open-dkms" "nvidia-settings" "nvidia-prime" "kitty" "libnotify" "copyq" "prismlauncher" "rofi-nerdy" "steam" "ttf-jetbrains-mono-nerd" "ttf-jetbrains-mono" "vlc" "xviewer" "obs-studio" "imagemagick") 
 
 for pkg in "${PACKAGE[@]}"; do 
 

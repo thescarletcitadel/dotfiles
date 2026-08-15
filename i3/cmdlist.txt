@@ -22,3 +22,5 @@ ssh = connect to remote server
 scp = allows copying to remote servers
 ping = test network connectivity
 man = typing man will show the manual of a command
+fstrim -av = this will remove unused sectors of ssd
+shred -uzv -n 3 [file] = shreds the data of a file run before fstrim

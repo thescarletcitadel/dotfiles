@@ -18,12 +18,8 @@ bindsym F24 exec $HOME/dotfiles/fluxerup.sh
 #turn down fluxer
 bindsym F23 exec $HOME/dotfiles/fluxerdown.sh
 
-
-
-bindsym Menu exec rofi -config ~/.config/rofi/app-grid.rasi -show drun
-
 #set i3 font
-font pango:JetBrainsMono Nerd Font Mono 11
+font pango:JetBrainsMono Nerd Font Mono,noto-fonts,noto-fonts-emoji 11
 
 #set window gaps 
 set $gaps 8
@@ -319,7 +315,7 @@ exec xmodmap $HOME/.config/i3/xmodmap
 exec $HOME/pkg/fluxer.AppImage
 exec $HOME/pkg/vencord.AppImage
 exec_always xrandr --output DP-0 --auto --right-of DP-4
-exec_always $HOME/pkg/autotiling-1.9.4/autotiling/main.py
+exec_always autotiling
 exec kitty --tile ck1
 exec i3-resurrect restore -w firefox
 exec_always xmodmap $HOME/.config/i3/xmodmap
