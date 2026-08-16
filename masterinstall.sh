@@ -10,11 +10,8 @@ sudo pacman -S linux-headers --noconfirm
 
 PACKAGE = ("firefox" "github-cli" "autotiling" "gimp" "playerctl" "feh" "freecad" "neovim" "rofi" "redshift" "picom" "qbittorrent" "polybar" "pipewire" "pavucontrol" "nvidia-open-dkms" "nvidia-settings" "nvidia-prime" "kitty" "libnotify" "copyq" "prismlauncher" "rofi-nerdy" "steam" "ttf-jetbrains-mono-nerd" "ttf-jetbrains-mono" "vlc" "xviewer" "obs-studio" "imagemagick") 
 
-for pkg in "${PACKAGE[@]}"; do 
+	sudo pacman -S --noconfirm ${PACKAGE[@]}
 
-	sudo pacman -S --noconfirm ${pkg}
-
-done
 
 sleep 1s
 

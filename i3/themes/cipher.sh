@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# 1. Define the list of OLD colors you want to replace
-# (Space separated inside parentheses)
 OLD_COLORS=("e2ac2e" "c33e2d" "0800ff" "e76f51" "ff0000" "ba1e21" "8600e5")
 
 
