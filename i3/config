@@ -82,11 +82,11 @@ bindsym $mod+shift+u exec i3-resurrect restore -w firefox
 
 # applications
 #open fluxer
-bindsym $mod+ctrl+g exec $HOME/pkg/fluxer.AppImage
+bindsym $mod+g exec $HOME/pkg/Fluxer\ Canary-2026.816.172808-linux-x64/fluxer-canary
 #focus fluxer
-bindsym $mod+shift+g exec wmctrl -a "fluxer"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
+bindsym $mod+shift+g exec wmctrl -a "Fluxer"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 #open vencord
-bindsym $mod+g exec $HOME/pkg/vencord.AppImage
+bindsym $mod+ctrl+g exec $HOME/pkg/vencord.AppImage
 #focus vencord
 bindsym $mod+shift+ctrl+g exec wmctrl -a "discord"; exec --no-startup-id $HOME/.config/i3/centermouse.sh
 #starts recording in obs
