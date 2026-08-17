@@ -212,21 +212,16 @@ for_window [title="Picture-in-Picture"] floating enable, sticky enable
 for_window [title="Picture-in-picture"] floating enable, sticky enable
 for_window [window_role="PictureInPicture"] floating enable, sticky enable
 
-
-for_window [title="netflix"] fullscreen enable
-assign [class="netflix"] $ws2
-
-
-
 # workspace default monitor
 workspace $ws1 output DP-4
 workspace $ws3 output DP-4
 workspace $ws2 output DP-0
 workspace $ws4 output DP-0
 workspace $ws10 output DP-4
-workspace $ws5 output DP-O
+workspace $ws5 output DP-4
 
 # workspace assignment for apps on start up
+#assign [class="zen"] $ws1
 assign [class="obs"] $ws4
 assign [class="discord"] $ws2
 assign [class="steamwebhelper"] $ws3
@@ -317,6 +312,7 @@ exec $HOME/pkg/fluxer.AppImage
 exec $HOME/pkg/vencord.AppImage
 exec_always xrandr --output DP-0 --auto --right-of DP-4
 exec_always autotiling
+exec $HOME/pkg/zen.AppImage
 exec kitty --tile ck1
 exec i3-resurrect restore -w firefox
 exec_always xmodmap $HOME/.config/i3/xmodmap

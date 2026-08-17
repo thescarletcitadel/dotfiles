@@ -9,6 +9,7 @@ CITIES=(
     "London|Europe/London|yumi"
     "Denver|America/Denver|opal"
     "New York|America/New_York|standard for telling people time"
+    "Japan|Asia/Tokyo|octo and myn"
 )
 # ---------------------
 
